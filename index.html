@@ -34,20 +34,17 @@
         <div>
           <h3>$</h3>
         </div>
-        <div>
-          <h3>142.55</h3>
-        </div>
-
+          <input class="rounded-full  p-2 focus:bg-gray-300 outline-none" placeholder="what's the total bill" type="text" id="input-area">
       </div>
       <div>
         <h3> select tip %</h3>
       </div>
       <div class="tip_container sm:ml-4 md:ml-0 lg:ml-0">
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold"> 5%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">10%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">15%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">20%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">25%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold" id="btn"> <span class="tip"> 5</span>%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold"><span class="tip"> 10</span>%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold"><span class="tip"> 15</span>%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold"><span class="tip"> 20</span>%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold"><span class="tip"> 25</span>%</button>
         <button class=" bg-gray-200 p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-gray-600 font-bold tracking-wide">Custom</button>
       </div>
       <div> 
@@ -59,7 +56,7 @@
             <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
           </svg>
         </div>
-        <div class="number"> <span class="num"> 5 </span></div>
+        <div class="number"> <span id="numberOfPeople" contenteditable="true"> 5 </span></div>
       </div>
     </div>
     <div class="second-section  rounded-lg sm:w-full md:w-2/4 lg:w-2/4 p-5 ">
@@ -69,7 +66,7 @@
             <p class="text-gray-400">/ person</p>
         </div>
         <div>
-          <h1 class="text-green-200 text-3xl"> $4.56</h1>
+          <h1 class="amount-per-person text-green-200 text-3xl"> $4.56</h1>
         </div>
       </div>
       <div class=" h-10 flex justify-between">
@@ -78,7 +75,7 @@
             <p class="text-gray-400">/ person</p>
         </div>
         <div>
-          <h1 class="text-green-200 text-3xl"> $32.79</h1>
+          <h1 class=" total-tip text-green-200 text-3xl " > $<span id="total-tip">32.79</span> </h1>
         </div>
       </div>
 
@@ -87,6 +84,6 @@
     </div>
 
   </div>
-
+ <script src="main.js"></script>
 </body>
 </html>
