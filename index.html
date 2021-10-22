@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+  
+  <title>Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex items-center justify-center flex-col">
+  <div class="title_container w-full pt-28 ">
+    <h3 class="app-name text-center tracking-widest text-2xl"> SPLI <br> TER</h3>
+  </div>
+  <div class="bg-white  md:flex lg:flex rounded-lg p-5  max-w-3xl  mt-12">
+    <div class="bg-white  rounded-lg sm:w-full md:w-2/4 lg:w-2/4 p-2">
+      <div w-full> 
+        <h4> Bill</h4>
+      </div>
+      <div class="flex w-11/12 justify-between mb-5">
+        <div>
+          <h3>$</h3>
+        </div>
+        <div>
+          <h3>142.55</h3>
+        </div>
+
+      </div>
+      <div>
+        <h3> select tip %</h3>
+      </div>
+      <div class="tip_container ml-4">
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold"> 5%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">10%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">15%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">20%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold">25%</button>
+        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-gray-600 font-bold tracking-wide">Custom</button>
+      </div>
+      <div> 
+        <h4 class="peopleNumbertext text-sm"> Number Of People</h4>
+      </div>
+      <div class="mt-3 w-11/12 flex justify-between">
+        <div class="person-avatar">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="number"> <span class="num"> 5 </span></div>
+      </div>
+    </div>
+    <div class="second-section  rounded-lg sm:w-full md:w-2/4 lg:w-2/4 p-5 ">
+      <div class=" flex justify-between h-10 my-5">
+        <div>
+            <h4 class="text-white font-bold text-sm">Tip Amount</h4>
+            <p class="text-gray-400">/ person</p>
+        </div>
+        <div>
+          <h1 class="text-green-200 text-3xl"> $4.56</h1>
+        </div>
+      </div>
+      <div class=" h-10 flex justify-between">
+        <div>
+            <h4 class="text-white font-bold text-sm">Total</h4>
+            <p class="text-gray-400">/ person</p>
+        </div>
+        <div>
+          <h1 class="text-green-200 text-3xl"> $32.79</h1>
+        </div>
+      </div>
+
+
+      <button class=" reset_button rounded-md text-center w-full p-4  mt-24">RESET</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
