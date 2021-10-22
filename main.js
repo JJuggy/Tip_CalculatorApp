@@ -18,108 +18,37 @@ let btns=document.querySelectorAll(".btns")
 
 //Button functionalities
 
-btn1.addEventListener('click',()=>{
-    if(numberOfPeople.value===''){
-        alert("enter the number of people")
-    } else{
-        let inputArea=input.value
-        let tipPercentage=5
-        let totalFee= inputArea
-        let tipSum= (tipPercentage/100)* totalFee
-        tipSum=tipSum.toFixed(2)
-        totalTip.innerHTML= tipSum
-
-
-        let members=numberOfPeople.value
-        let perPerson= tipSum/members
-        perPerson=perPerson.toFixed(2)
-        tipPerPerson.innerHTML=perPerson
-    }
-
-})
-btn2.addEventListener('click',()=>{
-    if(numberOfPeople.value===''){
-        alert("enter the number of people")
-    } else{
-        let inputArea=input.value
-        let tipPercentage=10
-        let totalFee= inputArea
-        let tipSum= (tipPercentage/100)* totalFee
-        tipSum=tipSum.toFixed(2)
-        totalTip.innerHTML= tipSum
-
-
-        let members=numberOfPeople.value
-        let perPerson= tipSum/members
-        perPerson=perPerson.toFixed(2)
-        tipPerPerson.innerHTML=perPerson
-    }
-
-})
-btn3.addEventListener('click',()=>{
-    if(numberOfPeople.value===''){
-        alert("enter the number of people")
-    } else{
-        let inputArea=input.value
-        let tipPercentage=15
-        let totalFee= inputArea
-        let tipSum= (tipPercentage/100)* totalFee
-        tipSum=tipSum.toFixed(2)
-        totalTip.innerHTML= tipSum
-
-
-        let members=numberOfPeople.value
-        let perPerson= tipSum/members
-        perPerson=perPerson.toFixed(2)
-        tipPerPerson.innerHTML=perPerson
-    }
-
-})
-btn4.addEventListener('click',()=>{
-    if(numberOfPeople.value===''){
-        alert("enter the number of people")
-    } else{
-        let inputArea=input.value
-        let tipPercentage=20
-        let totalFee= inputArea
-        let tipSum= (tipPercentage/100)* totalFee
-        tipSum=tipSum.toFixed(2)
-        totalTip.innerHTML= tipSum
-
-
-        let members=numberOfPeople.value
-        let perPerson= tipSum/members
-        perPerson=perPerson.toFixed(2)
-        tipPerPerson.innerHTML=perPerson
-    }
-
-})
-btn5.addEventListener('click',()=>{
-    if(numberOfPeople.value===''){
-        alert("enter the number of people")
-    } else {
-        let inputArea=input.value
-        let tipPercentage=25
-        let totalFee= inputArea
-        let tipSum= (tipPercentage/100)* totalFee
-        tipSum=tipSum.toFixed(2)
-        totalTip.innerHTML= tipSum
-
-
-        let members=numberOfPeople.value
-        let perPerson= tipSum/members
-        perPerson=perPerson.toFixed(2)
-        tipPerPerson.innerHTML=perPerson
-    }
-
-})
+function handleTip(tipPercentage) {
+    
+        if(numberOfPeople.value===''){
+            alert("enter the number of people")
+        } else{
+            let inputArea=input.value
+            let totalFee= inputArea
+            let tipSum= (tipPercentage/100)* totalFee
+            tipSum=tipSum.toFixed(2)
+            totalTip.innerHTML= tipSum
+    
+    
+            let members=numberOfPeople.value
+            let perPerson= tipSum/members
+            perPerson=perPerson.toFixed(2)
+            tipPerPerson.innerHTML=perPerson
+        }
+    
+}
+btn1.addEventListener('click',()=>handleTip(5))
+btn2.addEventListener('click',()=>handleTip(10))
+btn3.addEventListener('click',()=>handleTip(15))
+btn4.addEventListener('click',()=>handleTip(20))
+btn5.addEventListener('click',()=>handleTip(25))
 
 //Reset_Button_functionality
 resetButton.addEventListener('click',()=>{
     
    input.value=' '
    numberOfPeople.value=''
-    totalTip.innerHTML=' '
-    tipPerPerson.innerHTML=' '
+    totalTip.innerHTML=''
+    tipPerPerson.innerHTML=''
 })
 
