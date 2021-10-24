@@ -1,27 +1,20 @@
-body{
-    background: hsl(185, 41%, 84%);
-    font-family: 'Space Mono', monospace;
+body {
+  background: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
 }
 
-
-.second-section{
-
-    background-color: hsl(183, 100%, 15%);
+.second-section {
+  background-color: hsl(183, 100%, 15%);
 }
-.btns{
-
-background: hsl(183, 100%, 15%);
-
+.btns {
+  background: hsl(183, 100%, 15%);
 }
-.app-name{
-
-
-    color: hsl(183, 100%, 15%)
+.app-name {
+  color: hsl(183, 100%, 15%);
 }
-.reset_button{
-background: hsl(185, 84%, 40%)
+.reset_button {
+  background: hsl(185, 84%, 40%);
 }
-.peopleNumbertext{
-
-    font-family: 'Space Mono', monospace;
+.peopleNumbertext {
+  font-family: "Space Mono", monospace;
 }

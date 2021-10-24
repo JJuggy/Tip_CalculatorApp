@@ -1,89 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-  
-  <title>Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body class="flex items-center justify-center flex-col">
-  <div class="title_container flex items-center justify-center w-full pt-28 ">
-   <div class="logo_image">
-     <img src="./images/logo.svg" alt="">
-   </div>
-  </div>
-  <div class="bg-white  md:flex lg:flex rounded-lg p-5  max-w-3xl  mt-12">
-    <div class="bg-white  rounded-lg sm:w-full md:w-2/4 lg:w-2/4 p-2">
-      <div w-full> 
-        <h4> Bill</h4>
-      </div>
-      <div class=" bg-gray-300 p-3 rounded-full flex w-11/12 justify-between mb-5">
-        <div>
-          <h3>$</h3>
-        </div>
-          <input class="rounded-full   p-2 focus:bg-gray-300 outline-none" placeholder="Total bill" type="text" id="input-area">
-      </div>
-      <div>
-        <h3> select tip %</h3>
-      </div>
-      <div class="tip_container sm:ml-4 md:ml-0 lg:ml-0">
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold" id="btn1"> <span class="tip"> 5</span>%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold" id="btn2" ><span class="tip"> 10</span>%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold" id="btn3" ><span class="tip"> 15</span>%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold" id="btn4" ><span class="tip"> 20</span>%</button>
-        <button class="btns p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-white font-bold" id="btn5" ><span class="tip"> 25</span>%</button>
-        <button class=" bg-gray-200 p-2 m-2 rounded-md w-28 md:w-24  lg:w-24 text-gray-600 font-bold tracking-wide" id="custom-button" > custom </button>
-      </div>
-      <div> 
-        <h4 class="peopleNumbertext text-sm"> Number Of People</h4>
-      </div>
-      <div class=" bg-gray-200 p-3 rounded-md mt-3 w-11/12 flex justify-between">
-        <div class="person-avatar">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-          </svg>
-        </div>
-         <input type="text " class="w-1/4 outline-none  rounded-lg" id="numberOfPeople">
+    <title>Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center flex-col">
+    <div class="title_container flex items-center justify-center w-full pt-28">
+      <div class="logo_image">
+        <img src="./images/logo.svg" alt="" />
       </div>
     </div>
-    <div class="second-section  rounded-lg sm:w-full md:w-2/4 lg:w-2/4 p-5 ">
-      <div class=" flex justify-between h-10 my-5">
+ 
+    <div class="bg-white md:flex lg:flex rounded-lg p-5 max-w-3xl mt-12">
+      <div class="bg-white rounded-lg sm:w-full md:w-2/4 lg:w-2/4 p-2">
+        <div w-full>
+          <h4>Bill</h4>
+        </div>
+        <div
+          class="bg-gray-300 p-3 rounded-full flex w-11/12 justify-between mb-5"
+        >
+          <div>
+            <h3>$</h3>
+          </div>
+          <input
+            class="rounded-full p-2 focus:bg-gray-300 outline-none"
+            placeholder="Total bill"
+            type="text"
+            id="input-area"
+          />
+        </div>
         <div>
+          <h3>select tip %</h3>
+        </div>
+        <div class="tip_container sm:ml-4 md:ml-0 lg:ml-0">
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="5"
+          >
+            <span class="tip"> 5</span>%
+          </button>
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="10"
+          >
+            <span class="tip"> 10</span>%
+          </button>
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="15"
+          >
+            <span class="tip"> 15</span>%
+          </button>
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="20"
+          >
+            <span class="tip"> 20</span>%
+          </button>
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="25"
+          >
+            <span class="tip"> 25</span>%
+          </button>
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="30"
+          >
+            <span class="tip"> 30</span>%
+          </button>
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="35"
+          >
+            <span class="tip"> 35</span>%
+          </button>
+          <button
+            class="
+              btns
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-white
+              font-bold
+              tip_button
+            "
+            data-tip_percentage="40"
+          >
+            <span class="tip"> 40</span>%
+          </button>
+          <button
+            class="
+              bg-gray-200
+              p-2
+              m-2
+              rounded-md
+              w-28
+              md:w-24
+              lg:w-24
+              text-gray-600
+              font-bold
+              tracking-wide
+            "
+            id="custom-button"
+          >
+            custom
+          </button>
+        </div>
+        <div>
+          <h4 class="peopleNumbertext text-sm">Number Of People</h4>
+        </div>
+        <div
+          class="bg-gray-200 p-3 rounded-md mt-3 w-11/12 flex justify-between"
+        >
+          <div class="person-avatar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <input
+            type="text "
+            class="w-1/4 outline-none rounded-lg"
+            id="numberOfPeople"
+          />
+        </div>
+      </div>
+      <div class="second-section rounded-lg sm:w-full md:w-2/4 lg:w-2/4 p-5">
+        <div class="flex justify-between h-10 my-5">
+          <div>
             <h4 class="text-white font-bold text-sm">Tip Amount</h4>
             <p class="text-gray-400">/ person</p>
+          </div>
+          <div>
+            <h1 class="amount-per-person text-green-200 text-3xl">
+              $<span id="amount-per-person"> </span>
+            </h1>
+          </div>
         </div>
-        <div>
-          <h1 class="amount-per-person text-green-200 text-3xl" > $<span id="amount-per-person"> </span></h1>
-        </div>
-      </div>
-      <div class=" h-10 flex justify-between">
-        <div>
+        <div class="h-10 flex justify-between">
+          <div>
             <h4 class="text-white font-bold text-sm">Total</h4>
             <p class="text-gray-400">/ person</p>
+          </div>
+          <div>
+            <h1 class="total-tip text-green-200 text-3xl">
+              $<span id="total-tip"></span>
+            </h1>
+          </div>
         </div>
-        <div>
-          <h1 class=" total-tip text-green-200 text-3xl " > $<span id="total-tip"></span> </h1>
-        </div>
+
+        <button
+          class="reset_button rounded-md text-center w-full p-4 mt-24"
+          id="reset-button"
+        >
+          RESET
+        </button>
       </div>
-
-
-      <button class=" reset_button rounded-md text-center w-full p-4  mt-24" id="reset-button">RESET</button>
     </div>
-
-  </div>
- <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
